@@ -1,23 +1,25 @@
-import { BarChart } from "@mui/x-charts";
+import { LineChart } from "@mui/x-charts";
 
+export interface data {
+    xAxis: [{ data: number[] }];
+    series: [{ data: number[] }];
+    width: number;
+    height: number;
+}
 
-export default function Chart1() {
+export interface passedProps {
+    d: data[];
+}
+
+export default function Chart1(props: passedProps) {
     return (
-        <BarChart
-            xAxis={[
-                {
-                    id: 'barCategories',
-                    data: ['bar A', 'bar B', 'bar C'],
-                    scaleType: 'band',
-                },
-            ]}
-            series={[
-                {
-                    data: [2, 5, 3],
-                },
-            ]}
-            width={500}
-            height={300}
-        />
+        <h1>{props.d.map((item, index) => (
+            <LineChart // mui
+                xAxis={item.xAxis}
+                series={item.series}
+                width={item.width}
+                height={item.height}
+            />
+        ))}</h1>
     )
 }

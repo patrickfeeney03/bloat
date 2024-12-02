@@ -22,5 +22,5 @@ const dummyData: data[] = [
 ]
 
 export default function Weather() {
-    return <Chart1 d={dummyData} ></Chart1>
+    return <Chart1 data={dummyData} ></Chart1>
 }

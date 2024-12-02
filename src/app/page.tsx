@@ -5,7 +5,6 @@ import Chart1 from "../../components/Chart1";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Chart1></Chart1>
       <main className={styles.main}>
         <Image
           className={styles.logo}

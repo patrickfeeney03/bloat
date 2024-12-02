@@ -8,13 +8,13 @@ export interface data {
 }
 
 export interface passedProps {
-    d: data[];
+    data: data[];
 }
 
 export default function Chart1(props: passedProps) {
     return (
-        <h1>{props.d.map((item, index) => (
-            <LineChart // mui
+        <h1>{props.data.map((item, index) => (
+            <LineChart //
                 xAxis={item.xAxis}
                 series={item.series}
                 width={item.width}
